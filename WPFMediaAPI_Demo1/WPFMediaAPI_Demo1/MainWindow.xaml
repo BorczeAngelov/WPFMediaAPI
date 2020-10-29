@@ -1,0 +1,60 @@
+﻿<Window x:Class="WPFMediaAPI_Demo1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMediaAPI_Demo1"        
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450"
+        Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <MediaElement x:Name="MediaElement"
+                          LoadedBehavior="Manual" />
+
+            <DockPanel Grid.Row="1"
+                       LastChildFill="False">
+
+                <Button Content="ME Open Media File"
+                        Click="OpenMediaElementFile"
+                        Margin="5" />
+
+            </DockPanel>
+        </Grid>
+
+        <!--<Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <controls:MediaPlayerElement x:Name="MediaPlayerElement"                                         
+                                         Source="https://mediaplatstorage1.blob.core.windows.net/windows-universal-samples-media/elephantsdream-clip-h264_sd-aac_eng-aac_spa-aac_eng_commentary-srt_eng-srt_por-srt_swe.mkv"
+                                         AutoPlay="True"                                         
+                                         Height="450"
+                                         Width="800"
+                                         AreTransportControlsEnabled="True" />
+
+            <DockPanel Grid.Row="1"
+                       LastChildFill="False">
+
+                <Button Content="MPE Open Media File"
+                        Click="OpenMediaPlayerElementFile"
+                        Margin="5" />
+
+            </DockPanel>
+        </Grid>-->
+    </Grid>
+</Window>
